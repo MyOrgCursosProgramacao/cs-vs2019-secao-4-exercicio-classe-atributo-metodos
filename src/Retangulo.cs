@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Text;
 
 namespace src
@@ -27,13 +28,13 @@ namespace src
         public override string ToString()
         {
             return "Área = "
-                + Area()
+                + Area().ToString("F2", CultureInfo.InvariantCulture)
                 + Environment.NewLine
                 + "Perímetro = "
-                + Perimetro()
+                + Perimetro().ToString("F2", CultureInfo.InvariantCulture)
                 + Environment.NewLine
                 + "Diagonal = "
-                + Diagonal();
+                + Diagonal().ToString("F2", CultureInfo.InvariantCulture);
         }
     }
 }
